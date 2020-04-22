@@ -4,7 +4,10 @@
 @section('content')
 
 <div class="card m-2 text-center" >
-	 <span class="badge " style="background-color: yellow ; font-size: 2vw;"> {{$todo->due}} </span>
+	 <span class="badge " style="background-color: yellow ; font-size: 2vw;"> <?php  $w=explode('-', $todo->due);
+$q=array_reverse($w);
+$d=implode('-', $q);
+ ?>{{$d}} </span>
 
 
 	<h2><a href="Todo/{{$todo->id}}"   style="text-transform: capitalize;">{{$todo->title}}</a></h2>
