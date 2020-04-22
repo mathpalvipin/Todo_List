@@ -12,7 +12,7 @@ class TodosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { $todos= Todo::orderBy('created_at','desc')->get();
+    { $todos= Todo::orderBy('due','asc')->get();
         
          return view('index')->with('todos', $todos);
         //
@@ -48,9 +48,6 @@ class TodosController extends Controller
      $todo->content=$request->input('content');
      $d=$request->input('due');
      
-     $w=explode('-', $d);
-$q=array_reverse($w);
-$d=implode('-', $q);
 
      $todo->due=$d;
      
