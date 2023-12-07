@@ -2,6 +2,8 @@
 
 https://todosomething.herokuapp.com/
 
+use this link  to deploy https://www.youtube.com/watch?v=Opxn-X8eX_0
+
  
  bash
  ```
